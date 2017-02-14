@@ -14,25 +14,25 @@ namespace Anagram
       _compare = compare;
     }
 
-    public string Alphabetizer()
+    public int Alphabetizer()
     {
-        string none = "none";
-        char[] entryArray = _entry.ToCharArray();
-        Array.Sort(entryArray);
-        string alphaEntry = string.Join("", entryArray);
+      int counter = 0;
+      char[] entryArray = _entry.ToCharArray();
+      Array.Sort(entryArray);
+      string alphaEntry = string.Join("", entryArray);
 
-        char[] compareArray = _compare.ToCharArray();
+      string[] words = _compare.Split(' ');
+      foreach(string word in words)
+      {
+        char[] compareArray = word.ToCharArray();
         Array.Sort(compareArray);
         string alphaCompare = string.Join("", compareArray);
-
         if (alphaEntry == alphaCompare)
         {
-          return _compare;
+          counter++;
         }
-        else
-        {
-          return none;
-        }
+      }
+      return counter;
     }
   }
 }

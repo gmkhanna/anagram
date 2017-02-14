@@ -17,7 +17,7 @@ namespace Anagram
         string userWord = Request.Form["indiv-word"];
         string userText = Request.Form["text-set"];
         Anagram newAnagram = new Anagram(userWord, userText);
-        string result = newAnagram.Alphabetizer();
+        int result = newAnagram.Alphabetizer();
         return View["display.cshtml", result];
       };
     }
