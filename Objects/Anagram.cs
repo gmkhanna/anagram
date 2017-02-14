@@ -16,5 +16,13 @@ namespace Anagram
     {
       return _entry;
     }
+
+    public string Alphabetizer()
+    {
+        char[] newArray = _entry.ToCharArray();
+        Array.Sort(newArray);
+        string AlphaWord = string.Join("", newArray);
+        return AlphaWord;
+    }
   }
 }
