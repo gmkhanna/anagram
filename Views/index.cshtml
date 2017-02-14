@@ -1,0 +1,35 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+  <h2>Anagramagic</h2>
+</div>
+
+<h2>Hey you. Input a word</h2>
+
+<div class="row">
+
+  <div class="form">
+
+    <form action="/display" method="post">
+      <div class="col-md-5">
+        <label for="indiv-word">Type a word.</label>
+        <input id="indiv-word" type="text" name="indiv-word">
+      </div>
+      <div class="col-md-5">
+
+        <label for="text-set">Copy and Paste Some Text</label>
+        <input id="text-set" type="text" name="text-set">
+        <br>
+      </div>
+      <div class="col-md-2">
+
+        <button type="submit" name="button">Let's See!</button>
+      </div>
+    </form>
+  </div>
+
+
+
+</div>
